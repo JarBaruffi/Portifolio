@@ -4,11 +4,10 @@
     --cor-primaria: hsl(0, 0%, 97%);
     --cor-segundaria: #131212;
     --cor-terciaria: hwb(194 4% 8%);
-    --cor-hover: #9aaaa9;
+    --cor-hover: #00FF00;  
 
     --fonte-primaria:'krona One', sans-serif;
-    --fonte-segundaria:'Montserrat', sans-serif;
-
+    --fonte-segundaria:'Montserrat', sans-serif;    
 }
 
 * {
@@ -40,7 +39,6 @@ body {
     font-weight: 600;
     text-decoration: none;
 }
-
 
 .titulo-destaque {
     color: var(--cor-terciaria);   
@@ -78,12 +76,14 @@ body {
     align-items: center;
     gap: 32px;
 }
+
 .apresentacao__links__subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1.5rem;
 
 }
+
 .apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
@@ -99,6 +99,7 @@ body {
     color: var(--cor-segundaria);
     font-family: var(--fonte-segundaria);
 }
+
 .apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
     font-size: 1.6rem; 
@@ -124,18 +125,19 @@ body {
     font-family: var(--fonte-segundaria);
     color: var(--cor-segundaria);
     width: 100%;
-    
+    padding: 20px;    
 }
 .container {
     max-width: 500px;
     margin: 0 auto;    
-    border-radius: 5px;
-    
+    border-radius: 5px;    
 }
+
 label {
     display: block;
     margin-bottom: 10px;
 }
+
 input[type="text"], textarea {
     width: 95%;
     padding: 10px;
@@ -143,33 +145,30 @@ input[type="text"], textarea {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-button {
+
+.botao {
     background-color:var(--cor-terciaria);
     color:var(--cor-segundaria);
-    padding: 10px 20px;
+    padding: 8px 20px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    font-weight: bold;
     font-size: 15px;
-    transition: 1s all;
-    hover:var(--fonte-segundaria)
+    font-family: var(--fonte-segundaria);         
 }
-#whatsappButton {
-    background-color: #25d366;
     
+.botao:hover {
+    background-color: var(--cor-hover);
 }
-
 
 .rodape {
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
-    padding: 24px;
+    padding: 15px;
     text-align: center; 
     font-family: var(--fonte-segundaria);
     font-size: 1.5rem;
     font-weight: 400;
-
 }
 
 @media (max-width: 1200px ) {

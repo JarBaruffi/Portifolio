@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+</head>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="sobre mim.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="contato.html">Contato</a>
+        </nav>       
+    </header>    
+    <main class="container">
+                <h2 class="contato">Fale Conosco</h2>
+                <img class="apresentacao__imagem2"src="./Assets/homem no pc.png" alt="Foto do homem programando">                             
+                <form class="formulario" id="contactForm">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email" required placeholder="seuemail@dominio.com">
+        
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+        
+                    <label for="whatsapp">WhatsApp (Opcional):</label>
+                    <input type="text" id="whatsapp" name="whatsapp"placeholder="(XX)XXXXX-XXXX">
+        
+                    <button class="botao" type="submit">Enviar</button>
+                    <button class="botao" type="button" id="clearButton">Limpar</button>
+                    <button class="botao" type="button" id="whatsappButton">WhatsApp</button>
+                </form>                      
+    </main>    
+        <script>
+            const contactForm = document.getElementById('contactForm');
+            const clearButton = document.getElementById('clearButton');
+            const whatsappButton = document.getElementById('whatsappButton');
+    
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();                 
+                
+                alert('Formulário enviado com sucesso!');
+    
+                contactForm.reset();    
+                
+                contactForm.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    contactForm.style.animation = '';
+                }, 500);
+            });
+    
+            clearButton.addEventListener('click', function() {
+                
+                contactForm.reset();
+                contactForm.style.animation = '';
+            });
+    
+            whatsappButton.addEventListener('click', function() {
+                const whatsappNumber = document.getElementById('whatsapp').value;
+                if (whatsaSppNumber) {                    
+                    window.open(`https://wa.me/${whatsappNumber}`);
+                }
+            });
+        </script>
+    </main>
+    <footer class="rodape"> Desenvolvido por JB Tech® </footer>
+
+</head>
